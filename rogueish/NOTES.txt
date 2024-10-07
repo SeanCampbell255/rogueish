@@ -1,26 +1,81 @@
 2D roguelike
 
-MVP
+Feature ideas
+	-pause, options, etc
+		+ideally includes stats 
+		+stats must always be accurate at all times; HATE it when stats are never right in games like poe
+	-xp pickups
+		+upon leveling up gain choice of skill or similar powerup
+		+leaning on composition, resources and abstraction will help keep from repeating work
+	-gold shop
+		+post-death permanent upgrades
+		+similar to above but persistant
+	-saves
+		+big for the gold shot
+		+save statistics
+		+locked/unlocked level-up upgrades and gold upgrades
+	-enemy waves
+		+some system for enemies to intensify, becomes stronger and more numerous
+	-mirror image
+		+rare pickup that creates a duplicate of player so they double attacks
+	-weapons
+		+create different kinds of attacks
+	-attributes
+		+being able to have an "addded proj" that affects all weapons
+	-extend pickups
+		+xp garunteed, gold roll table, other pickup roll table (rogue genesia)
+	-new enemies
+		+keep individual enemy attributes minimal so they can just be handled globally
+			=i.e. global defense mod instead of needing to set every independently
+			=multipliers and attribs may work too
+	-elites
+		+tankier, hit harder, visually distinct, better drops
+	-scripted bosses and spawns
+		+just think about halls of torment, some objectives to keep interest and garuntee a path to power
+	-equipment
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MVP (COMPLETE)
 -player
 DONE    -moves 
 DONE	-auto attack (in aimed dir or autoaim) [][x]
-	-takes dmg
-	-dies
-	-picks up bs on ground
+DONE	-takes dmg
+DONE	-dies
+DONE	-picks up bs on ground
 -projectile
 DONE	-moves
-	-deals damage to enemy
+DONE	-deals damage to enemy
 DONE	-removes self (on damage or out of bounds)
 -enemy
-	-moves
+DONE	-moves
 DONE	-damages on contact
-	-some auto attack
+DONE	-some auto attack
 DONE	-dies
-	-drops bs on ground
+DONE	-drops bs on ground
 -level
-	-camera centered on player
-	-limited zone
-	-enemies spawn off screen
+DONE	-camera centered on player
+DONE	-enemies spawn some distance from player
+-pickup
+DONE	-spawns on enemy death
+DONE	-reciever func on game to track pickups
+DONE		+should store xp, gold, etc.
 
 NEXT UPPPPP:
-HEALTH AND DAMAGE
+DROPS
