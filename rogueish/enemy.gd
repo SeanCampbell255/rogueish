@@ -9,6 +9,7 @@ var proximityDamage = 5
 var canShoot = true
 var shotCooldown = 2
 var projectile = preload("res://projectile.tscn")
+var pickup = preload("res://pickup.tscn")
 var target
 var speed = 150
 var isInProximity = false
@@ -35,6 +36,9 @@ func get_target() -> Vector2:
 func take_damage(damage: int) -> void:
 	health -= damage
 	if(health < 1):
+		var drop = pickup.instantiate()
+		drop.global_position = global_position
+		get_parent().add_child(drop)
 		queue_free()
 
 func deal_proximity_damage(body: Player) -> void:

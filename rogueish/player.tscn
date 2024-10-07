@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckebvr2umj6rv"]
+[gd_scene load_steps=5 format=3 uid="uid://ckebvr2umj6rv"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_alm52"]
 [ext_resource type="Texture2D" uid="uid://dlu5pt6lxj1hi" path="res://icon.svg" id="2_3jbdd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ag6f3"]
 radius = 20.0
+
+[sub_resource type="Curve2D" id="Curve2D_11q0t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -650, -360, 0, 0, 0, 0, 650, -360, 0, 0, 0, 0, 650, 360, 0, 0, 0, 0, -650, 360, 0, 0, 0, 0, -650, -360)
+}
+point_count = 5
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(602, 320)
@@ -21,5 +27,14 @@ texture = ExtResource("2_3jbdd")
 [node name="AttackTimer" type="Timer" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_11q0t")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-288.641, -360)
+progress = 361.36
+
+[node name="Marker2D" type="Marker2D" parent="Path2D/PathFollow2D"]
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
