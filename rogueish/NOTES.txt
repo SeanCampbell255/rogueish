@@ -1,0 +1,26 @@
+2D roguelike
+
+MVP
+-player
+DONE    -moves 
+DONE	-auto attack (in aimed dir or autoaim) [][x]
+	-takes dmg
+	-dies
+	-picks up bs on ground
+-projectile
+DONE	-moves
+	-deals damage to enemy
+DONE	-removes self (on damage or out of bounds)
+-enemy
+	-moves
+DONE	-damages on contact
+	-some auto attack
+DONE	-dies
+	-drops bs on ground
+-level
+	-camera centered on player
+	-limited zone
+	-enemies spawn off screen
+
+NEXT UPPPPP:
+HEALTH AND DAMAGE
