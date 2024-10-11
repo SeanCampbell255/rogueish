@@ -36,7 +36,6 @@ layout_mode = 2
 theme_override_constants/margin_top = 200
 
 [node name="Resume" type="Button" parent="VBoxContainer/MarginContainer"]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 30)
 layout_mode = 2
 text = "RESUME"
@@ -46,7 +45,9 @@ layout_mode = 2
 theme_override_constants/margin_top = 50
 
 [node name="Quit" type="Button" parent="VBoxContainer/MarginContainer2"]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 30)
 layout_mode = 2
 text = "QUIT"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/Quit" to="." method="_on_quit_pressed"]

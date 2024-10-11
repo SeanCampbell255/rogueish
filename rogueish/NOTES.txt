@@ -3,8 +3,9 @@
 Feature ideas
 	-GAMBA, like really though people love the gamba
 		+rng mechanics can give that feel, like seeing the range an affix could roll in poe so you know you got lucky
-	-pause, options, etc
-		+ideally includes stats 
+	-pause
+DONE		+BASE FUNCTIONALITY
+		+ideally includes stats when available
 		+stats must always be accurate at all times; HATE it when stats are never right in games like poe
 	-xp pickups
 		+upon leveling up gain choice of skill or similar powerup
@@ -22,6 +23,7 @@ Feature ideas
 		+rare pickup that creates a duplicate of player so they double attacks
 	-weapons
 		+create different kinds of attacks
+		+can make as components, allowing them to be used by enemies
 	-attributes
 		+being able to have an "addded proj" that affects all weapons
 	-extend pickups
@@ -38,7 +40,11 @@ Feature ideas
 		+just think about halls of torment, some objectives to keep interest and garuntee a path to power
 	-equipment
 	
-
+NOTERS
+	-even the shrimple stuff like "proximity damage hitbox" can be made into a component
+		+this allows me to make a "thorns" skill or something where player has that hitbox, or a weapon that utilizes it
+	-make an aesthetic that leans into my own aesthetic preferences and humor
+		+i wanna feel motivated to make flavor text and dialogue or whatever because it's fun; that seems to come through on great games
 
 
 
