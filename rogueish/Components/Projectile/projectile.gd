@@ -25,6 +25,7 @@ func set_properties(i_position, i_direction, i_speed, i_duration, i_damage, i_ta
 	damage = i_damage
 	targetGroup = i_targetGroup
 
+#RECIEVERS
 func _on_body_entered(body: Node) -> void:
 	if(body.is_in_group(targetGroup)):
 		body.take_damage(damage)

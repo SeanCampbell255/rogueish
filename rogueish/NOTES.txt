@@ -32,11 +32,12 @@ Feature ideas
 			=multipliers and attribs may work too
 	-elites
 		+tankier, hit harder, visually distinct, better drops
+		+can have some unique attacks as a component, apply one at random to each elite
+			=this would mean player could use them too, global weapons?
 	-scripted bosses and spawns
 		+just think about halls of torment, some objectives to keep interest and garuntee a path to power
 	-equipment
 	
-
 
 
 
