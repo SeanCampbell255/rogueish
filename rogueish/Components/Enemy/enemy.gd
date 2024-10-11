@@ -8,8 +8,8 @@ var health = 10
 var proximityDamage = 5
 var canShoot = true
 var shotCooldown = 2
-var projectile = preload("res://projectile.tscn")
-var pickup = preload("res://pickup.tscn")
+var projectile = preload("res://Components/Projectile/projectile.tscn")
+var pickup = preload("res://Components/Pickup/pickup.tscn")
 var target
 var speed = 150
 var isInProximity = false
@@ -47,6 +47,7 @@ func deal_proximity_damage(body: Player) -> void:
 		body.take_damage(proximityDamage)
 		await get_tree().create_timer(0.25).timeout
 
+#SIGNAL RECIEVERS
 func _on_hurtbox_entered(body):
 	if(body is Player):
 		deal_proximity_damage(body)

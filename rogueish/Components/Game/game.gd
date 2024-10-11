@@ -1,6 +1,6 @@
 extends Node2D
 
-var enemy = preload("res://enemy.tscn")
+var enemy = preload("res://Components/Enemy/enemy.tscn")
 @onready var path: PathFollow2D = $Player/Path2D/PathFollow2D
 @onready var spawnPoint: Marker2D = $Player/Path2D/PathFollow2D/Marker2D
 @onready var timer: Timer = $SpawnTimer

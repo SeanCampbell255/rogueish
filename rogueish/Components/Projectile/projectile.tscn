@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://bsoxy7m5sf3la"]
 
-[ext_resource type="Script" path="res://projectile.gd" id="1_ryueb"]
-[ext_resource type="Texture2D" uid="uid://dlu5pt6lxj1hi" path="res://icon.svg" id="2_67kab"]
+[ext_resource type="Script" path="res://Components/Projectile/projectile.gd" id="1_8gsjb"]
+[ext_resource type="Texture2D" uid="uid://dlu5pt6lxj1hi" path="res://icon.svg" id="2_8jbjf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1sud6"]
 radius = 7.0
 
 [node name="Projectile" type="Area2D"]
 position = Vector2(20, 0)
-script = ExtResource("1_ryueb")
+script = ExtResource("1_8gsjb")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -16,7 +16,7 @@ shape = SubResource("CircleShape2D_1sud6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_67kab")
+texture = ExtResource("2_8jbjf")
 
 [node name="Timer" type="Timer" parent="."]
 

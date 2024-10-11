@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 var health = 100
 var movementInput = Vector2.ZERO
-var projectile = preload("res://projectile.tscn")
+var projectile = preload("res://Components/Projectile/projectile.tscn")
 var target: Enemy
 
 func _physics_process(_delta: float) -> void:

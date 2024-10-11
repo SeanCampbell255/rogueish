@@ -1,6 +1,8 @@
 2D roguelike
 
 Feature ideas
+	-GAMBA, like really though people love the gamba
+		+rng mechanics can give that feel, like seeing the range an affix could roll in poe so you know you got lucky
 	-pause, options, etc
 		+ideally includes stats 
 		+stats must always be accurate at all times; HATE it when stats are never right in games like poe
