@@ -1,6 +1,13 @@
 2D roguelike
 
 Feature ideas
+	-More UI
+		+HP bar
+			=use progress bar to visually show %
+			=overlay it with numeric i.e. (65/100)
+				_reference WoW or something
+		+Show gold
+		+Eventually arrows to point of interest
 	-GAMBA, like really though people love the gamba
 		+rng mechanics can give that feel, like seeing the range an affix could roll in poe so you know you got lucky
 	-pause
