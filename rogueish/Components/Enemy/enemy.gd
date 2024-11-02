@@ -13,6 +13,7 @@ var pickup = preload("res://Components/Pickup/pickup.tscn")
 var target
 var speed = 150
 var isInProximity = false
+var xp = 1
 
 func _ready() -> void:
 	add_to_group("Enemies")
@@ -36,16 +37,21 @@ func get_target() -> Vector2:
 func take_damage(damage: int) -> void:
 	health -= damage
 	if(health < 1):
-		var drop = pickup.instantiate()
-		drop.global_position = global_position
-		get_parent().add_child(drop)
-		queue_free()
+		die()
 
 func deal_proximity_damage(body: Player) -> void:
 	isInProximity = true
 	while(isInProximity):
 		body.take_damage(proximityDamage)
 		await get_tree().create_timer(0.25).timeout
+
+func die() -> void:
+	var drop = pickup.instantiate()
+	drop.global_position = global_position
+	get_parent().add_child(drop)
+	
+	get_parent().gain_xp(xp)
+	queue_free()
 
 #SIGNAL RECIEVERS
 func _on_hurtbox_entered(body):
