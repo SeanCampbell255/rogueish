@@ -31,14 +31,6 @@ func _physics_process(delta: float) -> void:
 	position += speed * direction * delta
 
 #CUSTOMS
-func get_target() -> Vector2:
-	return get_tree().get_first_node_in_group("Player").transform.origin
-
-func take_damage(damage: int) -> void:
-	health -= damage
-	if(health < 1):
-		die()
-
 func deal_proximity_damage(body: Player) -> void:
 	isInProximity = true
 	while(isInProximity):
@@ -52,6 +44,14 @@ func die() -> void:
 	
 	get_parent().gain_xp(xp)
 	queue_free()
+
+func get_target() -> Vector2:
+	return get_tree().get_first_node_in_group("Player").transform.origin
+
+func take_damage(damage: int) -> void:
+	health -= damage
+	if(health < 1):
+		die()
 
 #SIGNAL RECIEVERS
 func _on_hurtbox_entered(body):

@@ -7,6 +7,7 @@ Feature ideas
 			=overlay it with numeric i.e. (65/100)
 				_reference WoW or something
 		+Show gold
+		+XP progress bar
 		+Eventually arrows to point of interest
 	-GAMBA, like really though people love the gamba
 		+rng mechanics can give that feel, like seeing the range an affix could roll in poe so you know you got lucky
@@ -14,7 +15,9 @@ Feature ideas
 DONE		+BASE FUNCTIONALITY
 		+ideally includes stats when available
 		+stats must always be accurate at all times; HATE it when stats are never right in games like poe
-	-xp pickups
+	-xp
+DONE		+on kill/event instead of pickup
+		+algorithm to increase xp required to level
 		+upon leveling up gain choice of skill or similar powerup
 		+leaning on composition, resources and abstraction will help keep from repeating work
 	-gold shop
@@ -26,6 +29,7 @@ DONE		+BASE FUNCTIONALITY
 		+locked/unlocked level-up upgrades and gold upgrades
 	-enemy waves
 		+some system for enemies to intensify, becomes stronger and more numerous
+		+more xp, hp, dmg, etc
 	-mirror image
 		+rare pickup that creates a duplicate of player so they double attacks
 	-weapons

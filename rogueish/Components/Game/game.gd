@@ -15,9 +15,9 @@ func _ready() -> void:
 
 func gain_xp(amount: int) -> void:
 	xp += amount
-	print("xp: " + xp)
+	print("xp: ", xp)
 	if (xp >= xpToLevel):
-		xp - xpToLevel
+		xp -= xpToLevel
 		level_up()
 
 func grab_pickup(type: String, amount: int) -> void:
@@ -26,7 +26,7 @@ func grab_pickup(type: String, amount: int) -> void:
 		print(coins)
 
 func level_up() -> void:
-	print("leveled up, xp: " + xp)
+	print("leveled up, xp: ", xp)
 
 # Uses path follow to randomize a spawn position around the player and off screen
 func _on_spawn_timer_timeout() -> void:
