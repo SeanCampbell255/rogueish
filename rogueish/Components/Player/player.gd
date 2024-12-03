@@ -43,6 +43,9 @@ func player_movement() -> void:
 	else:
 		velocity = movementInput * speed
 	
+	if (Input.is_key_pressed(KEY_SPACE)):
+		position += movementInput * 20
+	
 	move_and_slide()
 
 func take_damage(i_damage: int) -> void:
