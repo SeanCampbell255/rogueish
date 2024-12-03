@@ -1,5 +1,9 @@
 extends Node2D
 
+signal xp_gained(xp)
+signal leveled_up(xpToLevel)
+signal coins_updated(coins)
+
 var enemy = preload("res://Components/Enemy/enemy.tscn")
 @onready var path: PathFollow2D = $Player/Path2D/PathFollow2D
 @onready var spawnPoint: Marker2D = $Player/Path2D/PathFollow2D/Marker2D
@@ -15,6 +19,7 @@ func _ready() -> void:
 
 func gain_xp(amount: int) -> void:
 	xp += amount
+	xp_gained.emit(amount)
 	print("xp: ", xp)
 	if (xp >= xpToLevel):
 		xp -= xpToLevel
@@ -23,9 +28,11 @@ func gain_xp(amount: int) -> void:
 func grab_pickup(type: String, amount: int) -> void:
 	if (type == "coin"):
 		coins += amount
+		coins_updated.emit(coins)
 		print(coins)
 
 func level_up() -> void:
+	leveled_up.emit(xpToLevel)
 	print("leveled up, xp: ", xp)
 
 # Uses path follow to randomize a spawn position around the player and off screen
